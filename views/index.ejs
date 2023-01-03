@@ -22,33 +22,19 @@
 <!--Start of category list-->
 <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
 
-<a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-        <img src="img/burgernfries.jpg" alt="American Food" Loading="lazy">
-    </div>
-    <div class="pt-1">American Food</div>
-</a>
 
-<a href="#" class="col text-center category__link">
+<% if(categories != '') { %> 
+    <% categories.forEach(function(category, index) { %>
+<a href="/categories/<%-category.name%>" class="col text-center category__link">
     <div class="category__img shadow">
-        <img src="img/burgernfries.jpg" alt="American Food" Loading="lazy">
+        <img src="img/<%-category.image%>" alt="<%-category.name %>" Loading="lazy">
     </div>
-    <div class="pt-1">American Food</div>
+    <div class="pt-1"><%-category.name %></div>
 </a>
+ <% }) %>
+<% } %>
 
-<a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-        <img src="img/burgernfries.jpg" alt="American Food" Loading="lazy">
-    </div>
-    <div class="pt-1">American Food</div>
-</a>
 
-<a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-        <img src="img/burgernfries.jpg" alt="American Food" Loading="lazy">
-    </div>
-    <div class="pt-1">American Food</div>
-</a>
 
 <a href="/categories" class="col text-center category__link">
     <div class="category__img shadow">
@@ -70,15 +56,66 @@
     </div>
 
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        
         <a href="/recipe/#" class="col text-center category_link">
             <div class="category__img category__img--large shadow">
                 <img src="img/desserts.jpg" alt="Desserts" Loading="lazy">
             </div>
             <div class="pt-1">Desserts</div>
         </a>
+
+        <a href="/recipe/#" class="col text-center category_link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/desserts.jpg" alt="Desserts" Loading="lazy">
+            </div>
+            <div class="pt-1">Desserts</div>
+        </a>
+
+        <a href="/recipe/#" class="col text-center category_link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/desserts.jpg" alt="Desserts" Loading="lazy">
+            </div>
+            <div class="pt-1">Desserts</div>
+        </a>
+
+        <a href="/recipe/#" class="col text-center category_link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/desserts.jpg" alt="Desserts" Loading="lazy">
+            </div>
+            <div class="pt-1">Desserts</div>
+        </a>
+
+        <a href="/recipe/#" class="col text-center category_link">
+            <div class="category__img category__img--large shadow">
+                <img src="img/desserts.jpg" alt="Desserts" Loading="lazy">
+            </div>
+            <div class="pt-1">Desserts</div>
+        </a>
+
     </div>
 
 </section>
 
+
+
 <!--Latest End-->
+
+
+
+<!--Submit Start-->
+
+<section class="px-4 py-5 my-5 text-center">
+    <img src="/img/recipebooklogo.jpg" class="d-block mx-auto mb-5 img-fluid" alt="Create your OWN recipe here today!" width="566" height="208" loading="lazy">
+    <h1 class="display-5 fw-bold">Create your OWN recipe here today!</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Create your very own recipe here today for many to see!</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/submit-recipe" class="btn btn-primary btn-dark btn-lg">Submit Recipe</a>
+    </div>
+</div>
+</section>
+
+
+<!--Submit End-->
+
 
